@@ -1,4 +1,4 @@
-package sk.springframework.com.java.test_pet_clinic;
+package test_pet_clinic;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
