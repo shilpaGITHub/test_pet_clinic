@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <groupId>sk.springframework.com.java</groupId>
+    <artifactId>test_pet_clinic</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <name>test_pet_clinic</name>
+    <description>SPF Pet Clinic</description>
+
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
@@ -10,16 +17,10 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.9.RELEASE</version>
+        <relativePath/>
     </parent>
-    <groupId>sk.springframework.com.java</groupId>
-    <artifactId>test_pet_clinic</artifactId>
-    <version>0.0.1</version>
-    <name>test_pet_clinic</name>
-    <description>SPF Pet Clinic</description>
 
     <properties>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UFT-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
     </properties>
 
@@ -31,16 +32,26 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-release-plugin</artifactId>
-                    <configuration>
+<!--                <artifactId>maven-release-plugin</artifactId>-->
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>${maven-surefire-plugin.version}</version>
+                <configuration>
+                    <!-- Force alphabetical order to have a reproducible build -->
+                   <!-- <runOrder>alphabetical</runOrder>
+                    <useSystemClassLoader>false</useSystemClassLoader>-->
+                </configuration>
+<!--                <configuration>
                         <goals>install</goals>
-                    </configuration>
+                       <autoVersionSubmodules>true</autoVersionSubmodules>
+                </configuration>-->
             </plugin>
         </plugins>
     </build>
     <scm>
         <developerConnection>scm:git:https://github.com/shilpaGITHub/test_pet_clinic.git</developerConnection>
-      <tag>test_pet_clinic-0.0.1</tag>
+
+        <tag>Head</tag>
+
   </scm>
 
 </project>
