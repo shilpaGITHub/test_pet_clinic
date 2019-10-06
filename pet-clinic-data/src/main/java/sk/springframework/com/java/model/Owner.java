@@ -1,4 +1,4 @@
 package sk.springframework.com.java.model;
 
-public class Owner {
+public class Owner extends Person {
 }

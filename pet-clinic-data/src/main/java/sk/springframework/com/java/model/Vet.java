@@ -1,4 +1,4 @@
 package sk.springframework.com.java.model;
 
-public class Vet {
+public class Vet extends BaseEntity{
 }

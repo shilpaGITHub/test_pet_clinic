@@ -1,6 +1,6 @@
 package sk.springframework.com.java.model;
 
-public class PetType {
+public class PetType extends BaseEntity{
     private String Name;
 
     public String getName() {
