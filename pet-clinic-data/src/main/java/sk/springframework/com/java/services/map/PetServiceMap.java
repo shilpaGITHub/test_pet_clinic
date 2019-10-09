@@ -1,11 +1,11 @@
 package sk.springframework.com.java.services.map;
-
+import org.springframework.stereotype.Service;
 import sk.springframework.com.java.model.Pet;
-import sk.springframework.com.java.services.PerService;
+import sk.springframework.com.java.services.CrudService;
 
 import java.util.Set;
-
-public class PetServiceMap extends AbstractMapInterface<Pet,Long> implements PerService {
+@Service
+public class PetServiceMap extends AbstractMapInterface<Pet,Long> implements CrudService<Pet, Long> {
     @Override
     public Set<Pet> findAll() {
         return super.findAll();
@@ -28,7 +28,7 @@ public class PetServiceMap extends AbstractMapInterface<Pet,Long> implements Per
 
     @Override
     public Pet save(Pet object) {
-        return null;
+        return super.save(object.getId(),object);
     }
 
 

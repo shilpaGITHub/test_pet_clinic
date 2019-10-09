@@ -17,7 +17,7 @@ public abstract class AbstractMapInterface<T,ID> {
        return map.get(id);
     }
 
-    T save(T object,ID id){
+    T save(ID id,T object){
         map.put(id,object);
         return object;
     }

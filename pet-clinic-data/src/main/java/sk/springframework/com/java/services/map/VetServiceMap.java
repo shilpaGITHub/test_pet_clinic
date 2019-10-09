@@ -1,10 +1,11 @@
 package sk.springframework.com.java.services.map;
 
+import org.springframework.stereotype.Service;
 import sk.springframework.com.java.model.Vet;
 import sk.springframework.com.java.services.VetService;
 
 import java.util.Set;
-
+@Service
 public class VetServiceMap extends AbstractMapInterface<Vet,Long> implements VetService {
     @Override
     public Set<Vet> findAll() {
@@ -28,7 +29,7 @@ public class VetServiceMap extends AbstractMapInterface<Vet,Long> implements Vet
 
     @Override
     public Vet save(Vet object) {
-        return super.save(object,object.getId());
+        return super.save(object.getId(),object);
     }
 
 

@@ -1,12 +1,13 @@
 package sk.springframework.com.java.services.map;
 
+
+import org.springframework.stereotype.Service;
 import sk.springframework.com.java.model.Owner;
 import sk.springframework.com.java.services.OwnerService;
 
 import java.util.Set;
-
+@Service
 public class OwnerServiceMap extends AbstractMapInterface<Owner,Long> implements OwnerService {
-
     @Override
     public Set<Owner> findAll() {
         return super.findAll();
@@ -29,7 +30,7 @@ public class OwnerServiceMap extends AbstractMapInterface<Owner,Long> implements
 
     @Override
     public Owner save(Owner object) {
-        return super.save(object,object.getId());
+        return super.save(object.getId(),object);
     }
 
 
